@@ -2,14 +2,14 @@ package com.demo.automation;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.adaptable.client.api.BinaryResponse;
-import org.adaptable.client.api.EndPoint;
-import org.adaptable.client.api.StandardRule;
-import org.adaptable.client.api.TextResponse;
-import org.adaptable.client.socket.ClientInitializer;
-import org.adaptable.common.api.Request;
-import org.adaptable.common.api.socket.AgentUnavailableException;
-import org.adaptable.common.web.WebRequest;
+import io.github.markgregg.client.api.BinaryResponse;
+import io.github.markgregg.client.api.EndPoint;
+import io.github.markgregg.client.api.StandardRule;
+import io.github.markgregg.client.api.TextResponse;
+import io.github.markgregg.client.socket.ClientInitializer;
+import io.github.markgregg.common.api.Request;
+import io.github.markgregg.common.api.socket.AgentUnavailableException;
+import io.github.markgregg.common.web.WebRequest;
 import org.junit.jupiter.api.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @ClientInitializer("localhost:8080")
 @Disabled /*remove then run test*/
 class AutomationExample {
-    private org.adaptable.client.api.Test test;
+    private io.github.markgregg.client.api.Test test;
     private static Process agentProcess;
     private static Process appProcess;
 
@@ -101,7 +101,7 @@ class AutomationExample {
 
     @BeforeEach
     public void preTest() {
-        test = new org.adaptable.client.api.Test();
+        test = new io.github.markgregg.client.api.Test();
     }
 
     @AfterEach
@@ -137,7 +137,7 @@ class AutomationExample {
                 s
         );
 
-        org.adaptable.common.web.TextResponse response = (org.adaptable.common.web.TextResponse) test.endPoint("socket").test(request);
+        io.github.markgregg.common.web.TextResponse response = (io.github.markgregg.common.web.TextResponse) test.endPoint("socket").test(request);
         assertEquals("{\"name\":\"WHO\",\"id\":1,\"identities\":[{\"type\":\"emp\",\"code\":\"0001\"},{\"type\":\"NI\",\"code\":\"NX050001\"}],\"address\":{\"street\":\"Wood st\",\"town\":\"London\",\"county\":\"Greater London\",\"postcode\":\"N7 2BL\"},\"details\":{\"gender\":\"Male\",\"age\":50,\"dateOfBirth\":\"1972-05-05\"}}", response.getBody());
     }
 

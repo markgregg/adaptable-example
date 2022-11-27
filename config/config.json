@@ -10,9 +10,9 @@
             "method": "GET"
         },
         "rules" : [ {
-            "@class" : "org.adaptable.common.api.StandardRule",
+            "@class" : "io.github.markgregg.common.api.StandardRule",
             "response" : {
-                "@class" : "org.adaptable.common.web.TextResponse",
+                "@class" : "io.github.markgregg.common.web.TextResponse",
                 "status" : 200,
                 "body" : "{\"name\":\"Mark\",\"id\":1,\"identities\":[{\"type\":\"emp\",\"code\":\"0001\"},{\"type\":\"NI\",\"code\":\"NX050001\"}],\"address\":{\"street\":\"Wood st\",\"town\":\"London\",\"county\":\"Greater London\",\"postcode\":\"N7 2BL\"},\"details\":{\"gender\":\"Male\",\"age\":50,\"dateOfBirth\":\"1972-05-05\"}}"
             }
@@ -26,9 +26,9 @@
             "method": "GET"
         },
         "rules" : [ {
-            "@class" : "org.adaptable.common.api.StandardRule",
+            "@class" : "io.github.markgregg.common.api.StandardRule",
             "response" : {
-                "@class" : "org.adaptable.common.web.TextResponse",
+                "@class" : "io.github.markgregg.common.web.TextResponse",
                 "status" : 200,
                 "body" : "{\"name\":\"Mark\",\"id\":1,\"identities\":[{\"type\":\"emp\",\"code\":\"0001\"},{\"type\":\"NI\",\"code\":\"NX050001\"}],\"address\":{\"street\":\"Wood st\",\"town\":\"London\",\"county\":\"Greater London\",\"postcode\":\"N7 2BL\"},\"details\":{\"gender\":\"Male\",\"age\":50,\"dateOfBirth\":\"1972-05-05\"}}"
             }
@@ -42,9 +42,9 @@
             "method": "POST"
         },
         "rules" : [ {
-            "@class" : "org.adaptable.common.api.StandardRule",
+            "@class" : "io.github.markgregg.common.api.StandardRule",
             "response" : {
-                "@class" : "org.adaptable.common.web.TextResponse",
+                "@class" : "io.github.markgregg.common.web.TextResponse",
                 "status" : 200,
                 "body" : "{\"name\":\"Mark\",\"id\":1,\"identities\":[{\"type\":\"country\",\"code\":\"GB\"},{\"type\":\"department\",\"code\":\"XYZ\"}],\"address\":{\"street\":\"Wood st\",\"town\":\"London\",\"county\":\"Greater London\",\"postcode\":\"N7 2BL\"},\"details\":{\"gender\":\"Male\",\"age\":50,\"dateOfBirth\":\"1972-05-05\"}},{\"name\":\"Jame\",\"id\":4,\"identities\":[{\"type\":\"country\",\"code\":\"GB\"},{\"type\":\"department\",\"code\":\"ABC\"}],\"address\":{\"street\":\"Range Lane\",\"town\":\"London\",\"county\":\"Greater London\",\"postcode\":\"N8 0BL\"},\"details\":{\"gender\":\"Male\",\"age\":70,\"dateOfBirth\":\"1952-05-05\"}}"
             }
