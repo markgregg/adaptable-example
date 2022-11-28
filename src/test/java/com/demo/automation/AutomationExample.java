@@ -37,15 +37,12 @@ class AutomationExample {
 
     @BeforeAll
     public static void preTests() throws Exception {
-
         try {
            agentProcess = startProcess(
-                    "C:\\Users\\gregg\\IdeaProjects\\github-adaptable\\adaptable-agent\\",
+                    ".\\",
                     "Started AgentApplicationKt",
                     "Task :agent:bootRun FAILED",
-                    "C:\\Users\\gregg\\IdeaProjects\\github-adaptable\\adaptable-agent\\gradlew.bat",
-                    "bootrun",
-                    "--args=\"C:\\Users\\gregg\\IdeaProjects\\github-adaptable\\adaptable-example\\config\\config.json"
+                    "runserver.bat"
             );
             appProcess = startProcess(
                     "C:\\Users\\gregg\\IdeaProjects\\github-adaptable\\adaptable-example",
@@ -123,7 +120,7 @@ class AutomationExample {
     }
 
     @Test
-    void testVerifyTests() throws AgentUnavailableException, JsonProcessingException {
+    void testVerifyTests() throws JsonProcessingException {
 
         test.addEndPoint("socket").addRule(
                 new StandardRule("$body.name=='Mark'",

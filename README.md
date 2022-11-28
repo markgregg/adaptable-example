@@ -1,16 +1,25 @@
-# adpatable-example
+# adaptable-example
 Provides an adaptable and consistent automation mocking framework
 
-Adaptable projects
+## To run the example 
 
-https://github.com/markgregg/adaptable-expression
+1. Execute maven clean and then package
+mvn clean package
 
-https://github.com/markgregg/adaptable-common
+2. Navigate to the AutomationExample class and run the suite of tests
 
-https://github.com/markgregg/adaptable-common-web
 
-https://github.com/markgregg/adaptable-client
+## Adaptable projects
 
-https://github.com/markgregg/adaptable-agent
+Expression language:
+https://github.com/markgregg/adaptable-expression 
 
-https://github.com/markgregg/adaptable-example
+Common functionality: https://github.com/markgregg/adaptable-common
+
+Common Web functionality: https://github.com/markgregg/adaptable-common-web
+
+Client library: https://github.com/markgregg/adaptable-client
+
+Mocking Agent: https://github.com/markgregg/adaptable-agent
+
+Example: https://github.com/markgregg/adaptable-example
